@@ -1,0 +1,107 @@
+/* ===================================================
+   EXPERIENCIA INÉS — ANIMACIONES
+   Microinteracciones: aparición suave, fade elegante,
+   movimiento ligero. Nada llamativo. Todo respeta
+   prefers-reduced-motion (ver reset.css).
+   =================================================== */
+
+/* ---- Transición de pila (push / pop) — drill-down jerárquico ---- */
+
+@keyframes screen-push-in{
+  from{ transform:translateX(18px); opacity:0; }
+  to{ transform:translateX(0); opacity:1; }
+}
+
+@keyframes screen-pop-in{
+  from{ transform:translateX(-18px); opacity:0; }
+  to{ transform:translateX(0); opacity:1; }
+}
+
+@keyframes screen-fade-in{
+  from{ opacity:0; transform:translateY(8px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+.screen--enter-push{
+  animation:screen-push-in var(--normal) var(--ease-soft) both;
+}
+
+.screen--enter-pop{
+  animation:screen-pop-in var(--normal) var(--ease-soft) both;
+}
+
+.screen--enter-fade{
+  animation:screen-fade-in var(--normal) var(--ease-soft) both;
+}
+
+/* ---- Aparición escalonada de listas: cada tarjeta llega
+   un instante después que la anterior, como si se sirviera
+   una a la vez ---- */
+
+.stagger-item{
+  animation:stagger-in var(--slow) var(--ease-out) backwards;
+}
+
+.stagger-item--1{ animation-delay:0ms; }
+.stagger-item--2{ animation-delay:60ms; }
+.stagger-item--3{ animation-delay:120ms; }
+.stagger-item--4{ animation-delay:180ms; }
+.stagger-item--5{ animation-delay:240ms; }
+.stagger-item--6{ animation-delay:300ms; }
+.stagger-item--7{ animation-delay:360ms; }
+.stagger-item--8{ animation-delay:420ms; }
+
+@keyframes stagger-in{
+  from{ opacity:0; transform:translateY(12px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+/* ---- Hero: entrada suave y escalonada del contenido ---- */
+
+.hero-content > *{
+  animation:hero-in var(--slow) var(--ease-out) backwards;
+}
+
+.hero-content > *:nth-child(1){ animation-delay:40ms; }
+.hero-content > *:nth-child(2){ animation-delay:160ms; }
+.hero-content > *:nth-child(3){ animation-delay:260ms; }
+.hero-content > *:nth-child(4){ animation-delay:360ms; }
+
+@keyframes hero-in{
+  from{ opacity:0; transform:translateY(14px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+/* ---- El logo respira: un brillo casi imperceptible que sube
+   y baja muy lentamente, como una vela — vida sin distraer.
+   Se combina con la entrada (hero-in) en una sola declaración:
+   dos reglas de "animation" separadas sobre el mismo elemento
+   se pisarían entre sí en vez de sumarse. ---- */
+
+.brand-logo--hero{
+  animation:
+    hero-in var(--slow) var(--ease-out) 40ms both,
+    logo-breathe 5.5s ease-in-out .8s infinite;
+}
+
+@keyframes logo-breathe{
+  0%, 100%{ box-shadow:var(--shadow-lg); }
+  50%{ box-shadow:0 30px 60px rgba(0,0,0,.30), 0 0 0 1px rgba(217,181,105,.08); }
+}
+
+/* ---- Reveal de "Sorpréndeme": aparición delicada, sin rebote ---- */
+
+@keyframes surprise-reveal{
+  from{ opacity:0; transform:scale(.96) translateY(6px); }
+  to{ opacity:1; transform:scale(1) translateY(0); }
+}
+
+.surprise-reveal{
+  animation:surprise-reveal var(--slow) var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .brand-logo--hero{
+    animation:hero-in .01ms linear both;
+  }
+}

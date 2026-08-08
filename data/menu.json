@@ -1,0 +1,231 @@
+{
+  "restaurant": "INÉS Café",
+  "version": "1.0",
+  "categorias": [
+    {
+      "id": "buenos_dias",
+      "nombre": "Buenos días",
+      "descripcion": "Desayunos preparados al momento.",
+      "icono": "sun",
+      "antojos": ["tradicional"],
+      "grupos": [
+        {
+          "id": "huevos_al_gusto",
+          "nombre": "Huevos al gusto",
+          "descripcion": "",
+          "productos": [
+            { "id": "hg_revueltos", "nombre": "Huevos revueltos", "precio": 100 },
+            { "id": "hg_chorizo", "nombre": "Con chorizo", "precio": 115 },
+            { "id": "hg_jamon_pavo", "nombre": "Con jamón de pavo", "precio": 100 },
+            { "id": "hg_mexicana", "nombre": "A la mexicana", "precio": 100 },
+            { "id": "hg_estrellados", "nombre": "Estrellados", "precio": 100 },
+            { "id": "hg_rancheros", "nombre": "Rancheros", "precio": 115 },
+            { "id": "hg_divorciados", "nombre": "Divorciados", "precio": 115 }
+          ]
+        },
+        {
+          "id": "huevos_motulenos",
+          "nombre": "Huevos Motuleños",
+          "descripcion": "",
+          "productos": [
+            { "id": "hm_unico", "nombre": "Huevos Motuleños", "precio": 110 }
+          ]
+        },
+        {
+          "id": "huevos_vaqueros",
+          "nombre": "Huevos Vaqueros",
+          "descripcion": "",
+          "productos": [
+            { "id": "hv_pollo", "nombre": "Con pollo", "precio": 120 },
+            { "id": "hv_cecina", "nombre": "Con cecina", "precio": 170 },
+            { "id": "hv_arrachera", "nombre": "Con arrachera", "precio": 165 },
+            { "id": "hv_roastbeef", "nombre": "Con costilla de roast beef", "precio": 150 }
+          ]
+        },
+        {
+          "id": "huevos_rotos",
+          "nombre": "Huevos Rotos",
+          "descripcion": "",
+          "productos": [
+            { "id": "hr_natural", "nombre": "Naturales", "precio": 100 },
+            { "id": "hr_arrachera", "nombre": "Con arrachera", "precio": 175 },
+            { "id": "hr_jamon_serrano", "nombre": "Con jamón serrano", "precio": 145 }
+          ]
+        },
+        {
+          "id": "omellette",
+          "nombre": "Omellette",
+          "descripcion": "",
+          "productos": [
+            { "id": "om_naturales", "nombre": "Naturales", "precio": 130 },
+            { "id": "om_claras", "nombre": "Claras", "precio": 140, "antojos": ["ligero"] }
+          ]
+        },
+        {
+          "id": "huevos_benedictinos",
+          "nombre": "Huevos Benedictinos",
+          "descripcion": "",
+          "productos": [
+            { "id": "hb_tocino", "nombre": "Tocino", "precio": 125 },
+            { "id": "hb_roastbeef", "nombre": "Roast beef", "precio": 130 },
+            { "id": "hb_jamon_serrano", "nombre": "Jamón serrano", "precio": 145 }
+          ]
+        },
+        {
+          "id": "molletes",
+          "nombre": "Molletes",
+          "descripcion": "",
+          "productos": [
+            { "id": "mo_pollo", "nombre": "Pollo", "precio": 120 },
+            { "id": "mo_jamon_pavo", "nombre": "Jamón de pavo", "precio": 120 },
+            { "id": "mo_cochinita", "nombre": "Cochinita", "precio": 140 },
+            { "id": "mo_chorizo", "nombre": "Chorizo", "precio": 130 },
+            { "id": "mo_champinon", "nombre": "Champiñón", "precio": 110 }
+          ]
+        },
+        {
+          "id": "huaraches",
+          "nombre": "Huaraches",
+          "descripcion": "",
+          "productos": [
+            { "id": "hu_naturales", "nombre": "Naturales", "precio": 75, "antojos": ["ligero"] },
+            { "id": "hu_cochinita", "nombre": "Cochinita", "precio": 130 },
+            { "id": "hu_pollo", "nombre": "Pollo", "precio": 110 },
+            { "id": "hu_cecina", "nombre": "Cecina", "precio": 150 },
+            { "id": "hu_arrachera", "nombre": "Arrachera", "precio": 170 }
+          ]
+        },
+        {
+          "id": "enchiladas",
+          "nombre": "Enchiladas",
+          "descripcion": "",
+          "productos": [
+            { "id": "en_enmoladas", "nombre": "Enmoladas", "precio": 110 },
+            { "id": "en_suizas", "nombre": "Suizas", "precio": 110 },
+            { "id": "en_cochinita", "nombre": "Cochinita", "precio": 140 },
+            { "id": "en_rojas_verdes", "nombre": "Rojas o verdes", "precio": 90 },
+            { "id": "en_enfrijoladas", "nombre": "Enfrijoladas", "precio": 105 }
+          ]
+        },
+        {
+          "id": "chilaquiles",
+          "nombre": "Chilaquiles",
+          "descripcion": "",
+          "productos": [
+            { "id": "ch_naturales", "nombre": "Naturales", "precio": 80, "antojos": ["ligero"] },
+            { "id": "ch_huevo", "nombre": "Con huevo", "precio": 90 },
+            { "id": "ch_pollo", "nombre": "Con pollo", "precio": 120 },
+            { "id": "ch_cochinita", "nombre": "Con cochinita", "precio": 140 },
+            { "id": "ch_cecina", "nombre": "Con cecina", "precio": 180 },
+            { "id": "ch_costilla_res", "nombre": "Con costilla de res", "precio": 180 },
+            { "id": "ch_arrachera", "nombre": "Con arrachera", "precio": 180 }
+          ]
+        },
+        {
+          "id": "tacos_ahogados",
+          "nombre": "Tacos ahogados",
+          "descripcion": "",
+          "productos": [
+            { "id": "ta_pollo", "nombre": "Pollo", "precio": 90 },
+            { "id": "ta_cochinita", "nombre": "Cochinita", "precio": 135 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entre_panes",
+      "nombre": "Entre Panes",
+      "descripcion": "Baguettes, sándwiches y hamburguesas.",
+      "icono": "sandwich",
+      "antojos": [],
+      "grupos": [
+        {
+          "id": "entre_panes_base",
+          "nombre": "Entre panes",
+          "descripcion": "",
+          "productos": [
+            { "id": "ep_baguette_queso", "nombre": "Baguette con queso", "precio": 95 },
+            { "id": "ep_baguette_pollo", "nombre": "Baguette de pollo", "precio": 115 },
+            { "id": "ep_baguette_arrachera", "nombre": "Baguette de arrachera", "precio": 140 },
+            { "id": "ep_baguette_jamon_serrano", "nombre": "Baguette de jamón serrano", "precio": 135 },
+            { "id": "ep_sandwich_arrachera", "nombre": "Sándwich de arrachera", "precio": 140 },
+            { "id": "ep_sandwich_pollo", "nombre": "Sándwich de pollo", "precio": 100, "antojos": ["ligero"] },
+            { "id": "ep_club", "nombre": "Club sándwich", "precio": 115 }
+          ]
+        },
+        {
+          "id": "hamburguesas",
+          "nombre": "Hamburguesas",
+          "descripcion": "",
+          "productos": [
+            { "id": "ha_arrachera", "nombre": "Arrachera", "precio": 140 },
+            { "id": "ha_clasica", "nombre": "Clásica con queso", "precio": 95 },
+            { "id": "ha_clasica_doble", "nombre": "Clásica con queso doble", "precio": 130 },
+            { "id": "ha_hawaiana", "nombre": "Hawaiana", "precio": 110 },
+            { "id": "ha_hawaiana_doble", "nombre": "Hawaiana doble", "precio": 140 },
+            { "id": "ha_pastor", "nombre": "Pastor", "precio": 120 },
+            { "id": "ha_pastor_doble", "nombre": "Pastor doble", "precio": 150 }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bebidas_calientes",
+      "nombre": "Bebidas Calientes",
+      "descripcion": "Espresso, latte, cappuccino y más.",
+      "icono": "coffee",
+      "antojos": ["cafe"],
+      "grupos": []
+    },
+    {
+      "id": "bebidas_frias",
+      "nombre": "Bebidas Frías",
+      "descripcion": "Frappés y bebidas heladas con y sin café.",
+      "icono": "glass-water",
+      "antojos": [],
+      "grupos": []
+    },
+    {
+      "id": "postres",
+      "nombre": "Postres",
+      "descripcion": "Dulce para comenzar el día.",
+      "icono": "cake",
+      "antojos": ["dulce"],
+      "nota": "Agrega por $20 extras a tu pan francés o hot cakes: compota de frutos rojos, cajeta, chocolate o Nutella.",
+      "grupos": [
+        {
+          "id": "bowl_fruta",
+          "nombre": "Bowl de fruta",
+          "descripcion": "",
+          "productos": [
+            { "id": "bf_unico", "nombre": "Bowl de fruta", "precio": 55, "antojos": ["ligero", "dulce"] }
+          ]
+        },
+        {
+          "id": "hot_cake",
+          "nombre": "Hot cake natural",
+          "descripcion": "",
+          "productos": [
+            { "id": "hc_unico", "nombre": "Hot cake natural", "precio": 55, "antojos": ["dulce"] }
+          ]
+        },
+        {
+          "id": "pan_frances",
+          "nombre": "Pan francés clásico",
+          "descripcion": "",
+          "productos": [
+            { "id": "pf_unico", "nombre": "Pan francés clásico", "precio": 70, "antojos": ["dulce"] }
+          ]
+        },
+        {
+          "id": "pan_dulce",
+          "nombre": "Pan dulce",
+          "descripcion": "",
+          "productos": [
+            { "id": "pd_unico", "nombre": "Pan dulce", "precio": 17, "antojos": ["dulce"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

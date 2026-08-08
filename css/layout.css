@@ -1,0 +1,302 @@
+/* ===================================================
+   EXPERIENCIA INÉS — LAYOUT
+   Estructura de app: shell, pantallas apiladas,
+   topbar y navbar persistentes.
+   =================================================== */
+
+html, body{
+  background:var(--bg-2);
+  color:var(--text);
+  font-family:var(--font-body);
+  overflow:hidden; /* el scroll vive dentro de cada .screen, no en body */
+}
+
+/* ---- Frame de "dispositivo" para pantallas grandes ---- */
+
+#app-frame{
+  position:relative;
+  width:100%;
+  max-width:var(--app-max-width);
+  height:100vh;
+  height:100dvh;
+  margin:0 auto;
+  background:var(--bg);
+  overflow:hidden;
+}
+
+/* ---- Pantallas apiladas ---- */
+
+#screen-stack{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+/* Atmósfera compartida por toda la app: un leño de luz cálida arriba
+   a la izquierda (como si entrara sol por una ventana) y un verde más
+   profundo hacia las esquinas. Sutil, no decorativo — da profundidad
+   para que ninguna pantalla se sienta plana. */
+.screen{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  background:
+    radial-gradient(ellipse 120% 60% at 15% 0%, rgba(217,181,105,.10), transparent 55%),
+    radial-gradient(ellipse 100% 70% at 100% 100%, rgba(0,0,0,.16), transparent 60%),
+    var(--bg);
+  overflow:hidden;
+}
+
+.screen[hidden]{
+  display:none;
+}
+
+.screen-body{
+  flex:1 1 auto;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+
+.screen-body::-webkit-scrollbar{
+  display:none;
+}
+
+/* Espacio inferior para que el contenido no quede bajo el navbar */
+.screen--with-navbar .screen-body{
+  padding-bottom:calc(var(--navbar-height) + var(--safe-bottom) + var(--s-5));
+}
+
+/* ---- Topbar (pantallas con navegación hacia atrás) ---- */
+
+.topbar{
+  position:relative;
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:calc(var(--topbar-height) + var(--safe-top));
+  padding:calc(var(--safe-top) + var(--s-3)) var(--s-7) var(--s-3);
+}
+
+.topbar .icon-btn{
+  position:absolute;
+  left:var(--s-4);
+  top:calc(var(--safe-top) + var(--s-3));
+}
+
+.topbar-title{
+  font-family:var(--font-accent);
+  font-style:italic;
+  font-weight:400;
+  font-size:1.7rem;
+  line-height:1;
+  color:var(--text);
+  text-align:center;
+}
+
+/* ---- Navbar inferior (persistente, tipo app nativa) ---- */
+
+.navbar{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:20;
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:1fr;
+  height:calc(var(--navbar-height) + var(--safe-bottom));
+  padding-bottom:var(--safe-bottom);
+  background:var(--bg-2);
+  box-shadow:0 -10px 24px rgba(0,0,0,.16);
+}
+
+.navbar::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:var(--s-5);
+  right:var(--s-5);
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--border-dark) 20%, var(--border-dark) 80%, transparent);
+}
+
+.navbar-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  color:var(--text-faint);
+  font-size:.665rem;
+  font-weight:500;
+  letter-spacing:.02em;
+  transition:color var(--fast) var(--ease-soft), transform var(--fast) var(--ease-soft);
+}
+
+.navbar-item svg{
+  width:21px;
+  height:21px;
+  transition:transform var(--fast) var(--ease-soft);
+}
+
+.navbar-item.is-active{
+  color:var(--accent);
+}
+
+.navbar-item.is-active svg{
+  transform:translateY(-1px);
+}
+
+.navbar.is-hidden{
+  display:none;
+}
+
+.navbar-item:active{
+  transform:scale(.94);
+}
+
+/* ---- Hero (pantalla de bienvenida) ---- */
+
+.hero-screen{
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:var(--s-7) var(--s-5);
+}
+
+.hero-content{
+  width:100%;
+  max-width:340px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* ---- Logotipo oficial (Hero y Contacto) ----
+   El archivo de imagen nunca se recolorea ni deforma.
+   Solo se le da un contenedor con esquinas redondeadas,
+   espacio generoso y una sombra suave para integrarlo
+   como una placa/medallón sobre el verde de la app. */
+
+.brand-logo{
+  display:block;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  transition:transform var(--slow) var(--ease-out);
+}
+
+.brand-logo img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.brand-logo--hero{
+  width:min(228px, 58vw);
+  margin-bottom:var(--s-6);
+}
+
+.brand-logo--contacto{
+  width:min(136px, 36vw);
+  margin:0 auto var(--s-5);
+}
+
+.hero-title{
+  font-family:var(--font-accent);
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(2.7rem, 11vw, 3.4rem);
+  line-height:1.05;
+  color:var(--text);
+  letter-spacing:.005em;
+}
+
+.hero-slogan{
+  margin-top:var(--s-4);
+  font-size:.95rem;
+  font-weight:300;
+  line-height:1.75;
+  color:var(--text-soft);
+  max-width:280px;
+}
+
+/* ---- Secciones internas ---- */
+
+.section-heading{
+  padding:var(--s-6) var(--s-5) var(--s-4);
+  text-align:center;
+}
+
+.section-heading__title{
+  font-family:var(--font-accent);
+  font-style:italic;
+  font-weight:400;
+  font-size:2.15rem;
+  line-height:1.1;
+  color:var(--accent);
+}
+
+.section-heading__subtitle{
+  margin-top:var(--s-2);
+  font-size:.88rem;
+  font-weight:300;
+  color:var(--text-soft);
+  line-height:1.6;
+}
+
+/* ---- Grid de tarjetas (antojo) ---- */
+
+.grid-antojo{
+  display:flex;
+  flex-direction:column;
+  gap:var(--s-3);
+  padding:0 var(--s-5) var(--s-5);
+}
+
+/* ---- Lista de categorías / navegación ---- */
+
+.list-stack{
+  display:flex;
+  flex-direction:column;
+  gap:var(--s-3);
+  padding:0 var(--s-5) var(--s-5);
+}
+
+/* ---- Empty states ---- */
+
+.empty-state{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:var(--s-8) var(--s-6);
+  color:var(--text-soft);
+}
+
+.empty-state svg{
+  width:38px;
+  height:38px;
+  color:var(--accent);
+  margin-bottom:var(--s-4);
+  opacity:.85;
+}
+
+.empty-state__title{
+  font-family:var(--font-accent);
+  font-style:italic;
+  font-weight:400;
+  font-size:1.2rem;
+  color:var(--text);
+  margin-bottom:var(--s-2);
+}
+
+.empty-state__text{
+  font-size:.86rem;
+  font-weight:300;
+  line-height:1.65;
+  max-width:250px;
+}

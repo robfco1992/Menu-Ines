@@ -1,0 +1,119 @@
+/* ===================================================
+   EXPERIENCIA INÉS — DESIGN TOKENS
+   Fuente única de verdad para color, tipografía,
+   espaciado, radios y sombras. Nada de estos valores
+   se repite hardcodeado en otro archivo CSS.
+   =================================================== */
+
+/* ---- Tipografía de marca: auto-hospedada, sin CDN externo ----
+   TeX Gyre Pagella — versión libre y de código abierto (licencia
+   GUST Font License) del histórico Palatino de Hermann Zapf.
+   Se sirve desde /fonts para que funcione incluso con el wifi
+   poco confiable de un local, sin depender de Google Fonts. */
+
+@font-face{
+  font-family:'Pagella';
+  src:url('../fonts/pagella-regular.woff') format('woff');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:'Pagella';
+  src:url('../fonts/pagella-italic.woff') format('woff');
+  font-weight:400;
+  font-style:italic;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:'Pagella';
+  src:url('../fonts/pagella-bold.woff') format('woff');
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:'Pagella';
+  src:url('../fonts/pagella-bolditalic.woff') format('woff');
+  font-weight:700;
+  font-style:italic;
+  font-display:swap;
+}
+
+:root{
+
+  /* ---- Color: superficie boutique verde + crema (tomado del logo oficial) ---- */
+  --bg:#20301F;              /* verde bosque profundo (fondo app) */
+  --bg-2:#2C3D2B;            /* verde secundario (navbar, elevación) */
+  --bg-soft:#28392A;         /* paso intermedio entre bg y bg-2, para capas sutiles */
+  --surface:#F8F3E9;         /* crema (tarjetas, hojas de menú) — mismo crema del logo */
+
+  --primary:#6C8A52;         /* verde oliva (acentos vivos) */
+  --secondary:#9A6A45;       /* terracota (marco del logo) */
+  --accent:#D9B569;          /* dorado (línea del marco del logo, precios, detalles) */
+  --accent-soft:rgba(217,181,105,.16);
+
+  --text:#FBF8F1;            /* texto sobre fondo verde (cálido, no blanco puro) */
+  --text-soft:rgba(251,248,241,.76);
+  --text-faint:rgba(251,248,241,.5);
+  --text-dark:#2D2D2D;       /* texto sobre crema/blanco */
+  --text-muted:#8A8378;      /* texto secundario sobre crema */
+
+  --border:#E6DDD2;
+  --border-dark:rgba(255,255,255,.12);
+  --border-light:rgba(255,255,255,.22);
+  --ink:#1C2B33;             /* azul marino profundo — pills, botón principal */
+
+  /* ---- Sombras (capas suaves, sensación de profundidad sin dramatismo) ---- */
+  --shadow-xs:0 2px 8px rgba(0,0,0,.08);
+  --shadow-sm:0 6px 18px rgba(0,0,0,.12);
+  --shadow-md:0 14px 34px rgba(0,0,0,.18);
+  --shadow-lg:0 26px 56px rgba(0,0,0,.26);
+  --shadow-inset:inset 0 1px 0 rgba(255,255,255,.5);
+  --shadow-inset-dark:inset 0 1px 0 rgba(255,255,255,.06);
+
+  /* ---- Radios ---- */
+  --radius-sm:10px;
+  --radius-md:18px;
+  --radius-lg:26px;
+  --radius-xl:38px;
+  --radius-pill:999px;
+
+  /* ---- Espaciado (escala de 4px) ---- */
+  --s-1:4px;
+  --s-2:8px;
+  --s-3:12px;
+  --s-4:16px;
+  --s-5:24px;
+  --s-6:32px;
+  --s-7:48px;
+  --s-8:64px;
+
+  /* ---- Tipografía ----
+     Pagella (auto-hospedada, ver @font-face arriba): versión libre
+     de Palatino — cálida, con raíz caligráfica, excelente
+     legibilidad. Sustituye a Playfair/Lora: menos peso visual,
+     más carácter artesanal, complementa al logotipo en vez de
+     competir con él. Su itálica cubre los momentos evocadores.
+     Poppins se mantiene para UI/cuerpo con pesos ligeros. */
+  --font-title:'Pagella', Georgia, 'Times New Roman', serif;
+  --font-accent:'Pagella', Georgia, serif;   /* siempre en cursiva vía font-style:italic */
+  --font-body:'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+
+  /* ---- Transiciones (microinteracciones, nada abrupto) ---- */
+  --fast:.22s;
+  --normal:.42s;
+  --slow:.65s;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+
+  /* ---- Layout de app ---- */
+  --app-max-width:480px;
+  --navbar-height:74px;
+  --topbar-height:64px;
+  --safe-top:env(safe-area-inset-top, 0px);
+  --safe-bottom:env(safe-area-inset-bottom, 0px);
+}

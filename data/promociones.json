@@ -1,0 +1,4 @@
+{
+  "_esquema": "Cada promoción: { id, titulo, descripcion, precio (opcional), etiqueta (opcional, ej. '2x1') }. Deja 'promociones' vacío para ocultar la sección con el estado vacío por defecto.",
+  "promociones": []
+}

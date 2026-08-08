@@ -1,0 +1,42 @@
+{
+  "restaurant": {
+    "name": "INÉS Café",
+    "slogan": "Cada desayuno se prepara al momento con ingredientes frescos.",
+    "logo": "",
+    "heroImage": ""
+  },
+
+  "contact": {
+    "phone": "246 265 2311",
+    "whatsapp": "5212462652311",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IN%C3%89S%20Caf%C3%A9%2C%20Calle%20Progreso%20Norte%2018%2C%20Col.%20Ximentla%20Centro%2C%2090802%20Santa%20Ana%20Chiautempan%2C%20Tlaxcala%2C%20M%C3%A9xico",
+    "facebook": "https://www.facebook.com/share/1DwTwmX6ao/",
+    "instagram": "https://www.instagram.com/ines_cafeteria?igsh=NWVuNThzZTIyeXI1"
+  },
+
+  "address": {
+    "linea1": "Calle Progreso Norte 18",
+    "linea2": "Col. Ximentla Centro",
+    "municipio": "Santa Ana Chiautempan",
+    "estado": "Tlaxcala",
+    "cp": "90802"
+  },
+
+  "schedule": {
+    "monday": "9:15 a.m. – 6:00 p.m.",
+    "tuesday": "9:30 a.m. – 5:00 p.m.",
+    "wednesday": "9:30 a.m. – 6:00 p.m.",
+    "thursday": "9:30 a.m. – 6:00 p.m.",
+    "friday": "9:30 a.m. – 6:00 p.m.",
+    "saturday": "9:30 a.m. – 4:00 p.m.",
+    "sunday": "Cerrado"
+  },
+
+  "nav": [
+    { "id": "antojo", "label": "Inicio", "icono": "home" },
+    { "id": "menu", "label": "Menú", "icono": "book" },
+    { "id": "promociones", "label": "Promos", "icono": "tag" },
+    { "id": "ubicacion", "label": "Ubicación", "icono": "map-pin" },
+    { "id": "contacto", "label": "Contacto", "icono": "phone" }
+  ]
+}
