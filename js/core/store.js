@@ -51,8 +51,83 @@ export function categoriaVacia(categoria) {
 }
 
 /**
- * Devuelve todos los productos (con su contexto) que están etiquetados
- * con un "antojo" dado, ya sea a nivel de categoría, grupo o producto.
+ * ¿Puede venderse esta variante/producto puntual? Precio válido y no
+ * marcada como oculta/inactiva/no disponible. Estas banderas son
+ * opcionales: si menu.json no las define, se considera disponible.
+ */
+function esVarianteValida(producto) {
+  const precio = Number(producto.precio);
+  if (!Number.isFinite(precio) || precio <= 0) return false;
+  if (producto.disponible === false) return false;
+  if (producto.activo === false) return false;
+  if (producto.oculto === true) return false;
+  return true;
+}
+
+/**
+ * Convierte un grupo en la UNIDAD que puede recomendarse, entendiendo
+ * la diferencia entre plato y variante:
+ *
+ *  - Grupo con 1 solo producto  → es un PLATILLO. Se recomienda ese
+ *    producto directamente: { tipo: "producto", categoria, grupo, producto }.
+ *
+ *  - Grupo con 2+ productos     → es un GRUPO DE VARIANTES (ej. "Huevos
+ *    al gusto"). Nunca se recomienda una variante suelta ("Con jamón");
+ *    se recomienda el grupo completo como una sola unidad:
+ *    { tipo: "grupo", categoria, grupo, variantesDisponibles, precioDesde }.
+ *    Las variantes ocultas/sin precio se excluyen del cálculo; si no
+ *    queda ninguna variante válida, el grupo entero no es recomendable.
+ *
+ * Devuelve null si el grupo no puede recomendarse en absoluto.
+ */
+export function obtenerUnidadRecomendable(categoria, grupo) {
+  if (!grupo || !Array.isArray(grupo.productos) || grupo.productos.length === 0) {
+    return null;
+  }
+
+  if (grupo.productos.length === 1) {
+    const producto = grupo.productos[0];
+    if (!esVarianteValida(producto)) return null;
+    return { tipo: "producto", categoria, grupo, producto };
+  }
+
+  const variantesDisponibles = grupo.productos.filter(esVarianteValida);
+  if (variantesDisponibles.length === 0) return null;
+
+  const precioDesde = Math.min(...variantesDisponibles.map((p) => Number(p.precio)));
+  return { tipo: "grupo", categoria, grupo, variantesDisponibles, precioDesde };
+}
+
+/**
+ * Etiquetas de "antojo" de una unidad recomendable.
+ *
+ *  - Platillo (tipo "producto"): hereda de producto → grupo → categoría,
+ *    en cascada (el primer nivel que tenga etiquetas gana). Hay un único
+ *    producto, no hay ambigüedad.
+ *
+ *  - Grupo de variantes (tipo "grupo"): la unidad que se recomienda es
+ *    el grupo completo (ej. "Huaraches"), nunca una variante suelta. Pero
+ *    si ALGUNA variante individual trae su propia etiqueta (ej.
+ *    "hu_naturales": antojos:["ligero"] dentro de "Huaraches", como ya
+ *    existe en el menú real), el grupo hereda esa etiqueta — así "Algo
+ *    ligero" sigue encontrando "Huaraches" (mostrado como grupo, con su
+ *    "Desde $X"), sin exponer nunca "Naturales" como resultado suelto.
+ *    Se combina con las etiquetas propias del grupo o, en su defecto,
+ *    de la categoría.
+ */
+function etiquetasDeUnidad(unidad) {
+  if (unidad.tipo === "producto") {
+    return unidad.producto.antojos || unidad.grupo.antojos || unidad.categoria.antojos || [];
+  }
+
+  const propias = unidad.grupo.antojos || unidad.categoria.antojos || [];
+  const heredadasDeVariantes = unidad.variantesDisponibles.flatMap((variante) => variante.antojos || []);
+  return [...new Set([...propias, ...heredadasDeVariantes])];
+}
+
+/**
+ * Devuelve todas las UNIDADES recomendables (platillos o grupos de
+ * variantes, nunca variantes sueltas) etiquetadas con un "antojo" dado.
  * Usado por el selector inteligente "¿Qué se te antoja hoy?".
  */
 export function getProductosPorAntojo(antojo) {
@@ -60,11 +135,10 @@ export function getProductosPorAntojo(antojo) {
 
   for (const categoria of getCategorias()) {
     for (const grupo of categoria.grupos || []) {
-      for (const producto of grupo.productos || []) {
-        const etiquetas = producto.antojos || grupo.antojos || categoria.antojos || [];
-        if (etiquetas.includes(antojo)) {
-          resultados.push({ categoria, grupo, producto });
-        }
+      const unidad = obtenerUnidadRecomendable(categoria, grupo);
+      if (!unidad) continue;
+      if (etiquetasDeUnidad(unidad).includes(antojo)) {
+        resultados.push(unidad);
       }
     }
   }
@@ -72,20 +146,22 @@ export function getProductosPorAntojo(antojo) {
   return resultados;
 }
 
-/** Elige un producto real al azar, ignorando categorías aún sin datos */
+/**
+ * Elige al azar una UNIDAD recomendable (platillo o grupo de variantes,
+ * nunca una variante suelta) para "Sorpréndeme".
+ */
 export function getProductoAleatorio() {
-  const todos = [];
+  const todas = [];
 
   for (const categoria of getCategorias()) {
     for (const grupo of categoria.grupos || []) {
-      for (const producto of grupo.productos || []) {
-        todos.push({ categoria, grupo, producto });
-      }
+      const unidad = obtenerUnidadRecomendable(categoria, grupo);
+      if (unidad) todas.push(unidad);
     }
   }
 
-  if (!todos.length) return null;
-  return todos[Math.floor(Math.random() * todos.length)];
+  if (!todas.length) return null;
+  return todas[Math.floor(Math.random() * todas.length)];
 }
 
 /** Categoría "más relevante" para un tipo de antojo (mapeo 1 a 1 cuando existe) */

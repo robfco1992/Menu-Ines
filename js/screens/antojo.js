@@ -2,8 +2,8 @@
 // EXPERIENCIA INÉS — screens/antojo.js
 // "¿Qué se te antoja hoy?" — selector inteligente.
 // No es decorativo: cada opción resuelve la categoría
-// (o producto) más relevante y navega directo ahí,
-// reduciendo el tiempo de decisión del cliente.
+// (o unidad recomendable) más relevante y navega directo
+// ahí, reduciendo el tiempo de decisión del cliente.
 // También funciona como pestaña "Inicio".
 // ==========================================
 
@@ -53,17 +53,26 @@ const OPCIONES = [
 
 function resolverAntojo(antojo) {
   if (antojo === "sorpresa") {
-    const resultado = getProductoAleatorio();
-    if (!resultado) {
+    const unidad = getProductoAleatorio();
+    if (!unidad) {
       router.switchTab("menu");
       return;
     }
-    router.push("producto", {
-      categoriaId: resultado.categoria.id,
-      grupoId: resultado.grupo.id,
-      productoId: resultado.producto.id,
+
+    // Unidad tipo "grupo" (ej. "Huevos al gusto") navega sin productoId:
+    // producto-detalle.js entra en "modo grupo" y ahí, y solo ahí, se
+    // muestran las variantes para elegir. Unidad tipo "producto" navega
+    // directo al platillo puntual.
+    const params = {
+      categoriaId: unidad.categoria.id,
+      grupoId: unidad.grupo.id,
       origen: "sorpresa",
-    });
+    };
+    if (unidad.tipo === "producto") {
+      params.productoId = unidad.producto.id;
+    }
+
+    router.push("producto", params);
     return;
   }
 
@@ -74,7 +83,8 @@ function resolverAntojo(antojo) {
     return;
   }
 
-  // 2) Si no, mostrar un resultado filtrado con lo real que sí aplica.
+  // 2) Si no, mostrar un resultado filtrado con las unidades reales que
+  // sí aplican (platillos o grupos de variantes, nunca variantes sueltas).
   const coincidencias = getProductosPorAntojo(antojo);
   router.push("resultado-antojo", { antojo, coincidencias });
 }

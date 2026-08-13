@@ -7,20 +7,50 @@
       "nombre": "Buenos días",
       "descripcion": "Desayunos preparados al momento.",
       "icono": "sun",
-      "antojos": ["tradicional"],
+      "antojos": [
+        "tradicional"
+      ],
       "grupos": [
         {
           "id": "huevos_al_gusto",
           "nombre": "Huevos al gusto",
           "descripcion": "",
           "productos": [
-            { "id": "hg_revueltos", "nombre": "Huevos revueltos", "precio": 100 },
-            { "id": "hg_chorizo", "nombre": "Con chorizo", "precio": 115 },
-            { "id": "hg_jamon_pavo", "nombre": "Con jamón de pavo", "precio": 100 },
-            { "id": "hg_mexicana", "nombre": "A la mexicana", "precio": 100 },
-            { "id": "hg_estrellados", "nombre": "Estrellados", "precio": 100 },
-            { "id": "hg_rancheros", "nombre": "Rancheros", "precio": 115 },
-            { "id": "hg_divorciados", "nombre": "Divorciados", "precio": 115 }
+            {
+              "id": "hg_revueltos",
+              "nombre": "Huevos revueltos",
+              "precio": 100
+            },
+            {
+              "id": "hg_chorizo",
+              "nombre": "Con chorizo",
+              "precio": 115
+            },
+            {
+              "id": "hg_jamon_pavo",
+              "nombre": "Con jamón de pavo",
+              "precio": 100
+            },
+            {
+              "id": "hg_mexicana",
+              "nombre": "A la mexicana",
+              "precio": 100
+            },
+            {
+              "id": "hg_estrellados",
+              "nombre": "Estrellados",
+              "precio": 100
+            },
+            {
+              "id": "hg_rancheros",
+              "nombre": "Rancheros",
+              "precio": 115
+            },
+            {
+              "id": "hg_divorciados",
+              "nombre": "Divorciados",
+              "precio": 115
+            }
           ]
         },
         {
@@ -28,7 +58,11 @@
           "nombre": "Huevos Motuleños",
           "descripcion": "",
           "productos": [
-            { "id": "hm_unico", "nombre": "Huevos Motuleños", "precio": 110 }
+            {
+              "id": "hm_unico",
+              "nombre": "Huevos Motuleños",
+              "precio": 110
+            }
           ]
         },
         {
@@ -36,10 +70,26 @@
           "nombre": "Huevos Vaqueros",
           "descripcion": "",
           "productos": [
-            { "id": "hv_pollo", "nombre": "Con pollo", "precio": 120 },
-            { "id": "hv_cecina", "nombre": "Con cecina", "precio": 170 },
-            { "id": "hv_arrachera", "nombre": "Con arrachera", "precio": 165 },
-            { "id": "hv_roastbeef", "nombre": "Con costilla de roast beef", "precio": 150 }
+            {
+              "id": "hv_pollo",
+              "nombre": "Con pollo",
+              "precio": 120
+            },
+            {
+              "id": "hv_cecina",
+              "nombre": "Con cecina",
+              "precio": 170
+            },
+            {
+              "id": "hv_arrachera",
+              "nombre": "Con arrachera",
+              "precio": 165
+            },
+            {
+              "id": "hv_roastbeef",
+              "nombre": "Con costilla de roast beef",
+              "precio": 150
+            }
           ]
         },
         {
@@ -47,9 +97,21 @@
           "nombre": "Huevos Rotos",
           "descripcion": "",
           "productos": [
-            { "id": "hr_natural", "nombre": "Naturales", "precio": 100 },
-            { "id": "hr_arrachera", "nombre": "Con arrachera", "precio": 175 },
-            { "id": "hr_jamon_serrano", "nombre": "Con jamón serrano", "precio": 145 }
+            {
+              "id": "hr_natural",
+              "nombre": "Naturales",
+              "precio": 100
+            },
+            {
+              "id": "hr_arrachera",
+              "nombre": "Con arrachera",
+              "precio": 175
+            },
+            {
+              "id": "hr_jamon_serrano",
+              "nombre": "Con jamón serrano",
+              "precio": 145
+            }
           ]
         },
         {
@@ -57,8 +119,19 @@
           "nombre": "Omellette",
           "descripcion": "",
           "productos": [
-            { "id": "om_naturales", "nombre": "Naturales", "precio": 130 },
-            { "id": "om_claras", "nombre": "Claras", "precio": 140, "antojos": ["ligero"] }
+            {
+              "id": "om_naturales",
+              "nombre": "Naturales",
+              "precio": 130
+            },
+            {
+              "id": "om_claras",
+              "nombre": "Claras",
+              "precio": 140,
+              "antojos": [
+                "ligero"
+              ]
+            }
           ]
         },
         {
@@ -66,9 +139,21 @@
           "nombre": "Huevos Benedictinos",
           "descripcion": "",
           "productos": [
-            { "id": "hb_tocino", "nombre": "Tocino", "precio": 125 },
-            { "id": "hb_roastbeef", "nombre": "Roast beef", "precio": 130 },
-            { "id": "hb_jamon_serrano", "nombre": "Jamón serrano", "precio": 145 }
+            {
+              "id": "hb_tocino",
+              "nombre": "Tocino",
+              "precio": 125
+            },
+            {
+              "id": "hb_roastbeef",
+              "nombre": "Roast beef",
+              "precio": 130
+            },
+            {
+              "id": "hb_jamon_serrano",
+              "nombre": "Jamón serrano",
+              "precio": 145
+            }
           ]
         },
         {
@@ -76,11 +161,31 @@
           "nombre": "Molletes",
           "descripcion": "",
           "productos": [
-            { "id": "mo_pollo", "nombre": "Pollo", "precio": 120 },
-            { "id": "mo_jamon_pavo", "nombre": "Jamón de pavo", "precio": 120 },
-            { "id": "mo_cochinita", "nombre": "Cochinita", "precio": 140 },
-            { "id": "mo_chorizo", "nombre": "Chorizo", "precio": 130 },
-            { "id": "mo_champinon", "nombre": "Champiñón", "precio": 110 }
+            {
+              "id": "mo_pollo",
+              "nombre": "Pollo",
+              "precio": 120
+            },
+            {
+              "id": "mo_jamon_pavo",
+              "nombre": "Jamón de pavo",
+              "precio": 120
+            },
+            {
+              "id": "mo_cochinita",
+              "nombre": "Cochinita",
+              "precio": 140
+            },
+            {
+              "id": "mo_chorizo",
+              "nombre": "Chorizo",
+              "precio": 130
+            },
+            {
+              "id": "mo_champinon",
+              "nombre": "Champiñón",
+              "precio": 110
+            }
           ]
         },
         {
@@ -88,11 +193,34 @@
           "nombre": "Huaraches",
           "descripcion": "",
           "productos": [
-            { "id": "hu_naturales", "nombre": "Naturales", "precio": 75, "antojos": ["ligero"] },
-            { "id": "hu_cochinita", "nombre": "Cochinita", "precio": 130 },
-            { "id": "hu_pollo", "nombre": "Pollo", "precio": 110 },
-            { "id": "hu_cecina", "nombre": "Cecina", "precio": 150 },
-            { "id": "hu_arrachera", "nombre": "Arrachera", "precio": 170 }
+            {
+              "id": "hu_naturales",
+              "nombre": "Naturales",
+              "precio": 75,
+              "antojos": [
+                "ligero"
+              ]
+            },
+            {
+              "id": "hu_cochinita",
+              "nombre": "Cochinita",
+              "precio": 130
+            },
+            {
+              "id": "hu_pollo",
+              "nombre": "Pollo",
+              "precio": 110
+            },
+            {
+              "id": "hu_cecina",
+              "nombre": "Cecina",
+              "precio": 150
+            },
+            {
+              "id": "hu_arrachera",
+              "nombre": "Arrachera",
+              "precio": 170
+            }
           ]
         },
         {
@@ -100,11 +228,31 @@
           "nombre": "Enchiladas",
           "descripcion": "",
           "productos": [
-            { "id": "en_enmoladas", "nombre": "Enmoladas", "precio": 110 },
-            { "id": "en_suizas", "nombre": "Suizas", "precio": 110 },
-            { "id": "en_cochinita", "nombre": "Cochinita", "precio": 140 },
-            { "id": "en_rojas_verdes", "nombre": "Rojas o verdes", "precio": 90 },
-            { "id": "en_enfrijoladas", "nombre": "Enfrijoladas", "precio": 105 }
+            {
+              "id": "en_enmoladas",
+              "nombre": "Enmoladas",
+              "precio": 110
+            },
+            {
+              "id": "en_suizas",
+              "nombre": "Suizas",
+              "precio": 110
+            },
+            {
+              "id": "en_cochinita",
+              "nombre": "Cochinita",
+              "precio": 140
+            },
+            {
+              "id": "en_rojas_verdes",
+              "nombre": "Rojas o verdes",
+              "precio": 90
+            },
+            {
+              "id": "en_enfrijoladas",
+              "nombre": "Enfrijoladas",
+              "precio": 105
+            }
           ]
         },
         {
@@ -112,13 +260,44 @@
           "nombre": "Chilaquiles",
           "descripcion": "",
           "productos": [
-            { "id": "ch_naturales", "nombre": "Naturales", "precio": 80, "antojos": ["ligero"] },
-            { "id": "ch_huevo", "nombre": "Con huevo", "precio": 90 },
-            { "id": "ch_pollo", "nombre": "Con pollo", "precio": 120 },
-            { "id": "ch_cochinita", "nombre": "Con cochinita", "precio": 140 },
-            { "id": "ch_cecina", "nombre": "Con cecina", "precio": 180 },
-            { "id": "ch_costilla_res", "nombre": "Con costilla de res", "precio": 180 },
-            { "id": "ch_arrachera", "nombre": "Con arrachera", "precio": 180 }
+            {
+              "id": "ch_naturales",
+              "nombre": "Naturales",
+              "precio": 80,
+              "antojos": [
+                "ligero"
+              ]
+            },
+            {
+              "id": "ch_huevo",
+              "nombre": "Con huevo",
+              "precio": 90
+            },
+            {
+              "id": "ch_pollo",
+              "nombre": "Con pollo",
+              "precio": 120
+            },
+            {
+              "id": "ch_cochinita",
+              "nombre": "Con cochinita",
+              "precio": 140
+            },
+            {
+              "id": "ch_cecina",
+              "nombre": "Con cecina",
+              "precio": 180
+            },
+            {
+              "id": "ch_costilla_res",
+              "nombre": "Con costilla de res",
+              "precio": 180
+            },
+            {
+              "id": "ch_arrachera",
+              "nombre": "Con arrachera",
+              "precio": 180
+            }
           ]
         },
         {
@@ -126,8 +305,16 @@
           "nombre": "Tacos ahogados",
           "descripcion": "",
           "productos": [
-            { "id": "ta_pollo", "nombre": "Pollo", "precio": 90 },
-            { "id": "ta_cochinita", "nombre": "Cochinita", "precio": 135 }
+            {
+              "id": "ta_pollo",
+              "nombre": "Pollo",
+              "precio": 90
+            },
+            {
+              "id": "ta_cochinita",
+              "nombre": "Cochinita",
+              "precio": 135
+            }
           ]
         }
       ]
@@ -144,13 +331,44 @@
           "nombre": "Entre panes",
           "descripcion": "",
           "productos": [
-            { "id": "ep_baguette_queso", "nombre": "Baguette con queso", "precio": 95 },
-            { "id": "ep_baguette_pollo", "nombre": "Baguette de pollo", "precio": 115 },
-            { "id": "ep_baguette_arrachera", "nombre": "Baguette de arrachera", "precio": 140 },
-            { "id": "ep_baguette_jamon_serrano", "nombre": "Baguette de jamón serrano", "precio": 135 },
-            { "id": "ep_sandwich_arrachera", "nombre": "Sándwich de arrachera", "precio": 140 },
-            { "id": "ep_sandwich_pollo", "nombre": "Sándwich de pollo", "precio": 100, "antojos": ["ligero"] },
-            { "id": "ep_club", "nombre": "Club sándwich", "precio": 115 }
+            {
+              "id": "ep_baguette_queso",
+              "nombre": "Baguette con queso",
+              "precio": 95
+            },
+            {
+              "id": "ep_baguette_pollo",
+              "nombre": "Baguette de pollo",
+              "precio": 115
+            },
+            {
+              "id": "ep_baguette_arrachera",
+              "nombre": "Baguette de arrachera",
+              "precio": 140
+            },
+            {
+              "id": "ep_baguette_jamon_serrano",
+              "nombre": "Baguette de jamón serrano",
+              "precio": 135
+            },
+            {
+              "id": "ep_sandwich_arrachera",
+              "nombre": "Sándwich de arrachera",
+              "precio": 140
+            },
+            {
+              "id": "ep_sandwich_pollo",
+              "nombre": "Sándwich de pollo",
+              "precio": 100,
+              "antojos": [
+                "ligero"
+              ]
+            },
+            {
+              "id": "ep_club",
+              "nombre": "Club sándwich",
+              "precio": 115
+            }
           ]
         },
         {
@@ -158,13 +376,41 @@
           "nombre": "Hamburguesas",
           "descripcion": "",
           "productos": [
-            { "id": "ha_arrachera", "nombre": "Arrachera", "precio": 140 },
-            { "id": "ha_clasica", "nombre": "Clásica con queso", "precio": 95 },
-            { "id": "ha_clasica_doble", "nombre": "Clásica con queso doble", "precio": 130 },
-            { "id": "ha_hawaiana", "nombre": "Hawaiana", "precio": 110 },
-            { "id": "ha_hawaiana_doble", "nombre": "Hawaiana doble", "precio": 140 },
-            { "id": "ha_pastor", "nombre": "Pastor", "precio": 120 },
-            { "id": "ha_pastor_doble", "nombre": "Pastor doble", "precio": 150 }
+            {
+              "id": "ha_arrachera",
+              "nombre": "Arrachera",
+              "precio": 140
+            },
+            {
+              "id": "ha_clasica",
+              "nombre": "Clásica con queso",
+              "precio": 95
+            },
+            {
+              "id": "ha_clasica_doble",
+              "nombre": "Clásica con queso doble",
+              "precio": 130
+            },
+            {
+              "id": "ha_hawaiana",
+              "nombre": "Hawaiana",
+              "precio": 110
+            },
+            {
+              "id": "ha_hawaiana_doble",
+              "nombre": "Hawaiana doble",
+              "precio": 140
+            },
+            {
+              "id": "ha_pastor",
+              "nombre": "Pastor",
+              "precio": 120
+            },
+            {
+              "id": "ha_pastor_doble",
+              "nombre": "Pastor doble",
+              "precio": 150
+            }
           ]
         }
       ]
@@ -174,8 +420,275 @@
       "nombre": "Bebidas Calientes",
       "descripcion": "Espresso, latte, cappuccino y más.",
       "icono": "coffee",
-      "antojos": ["cafe"],
-      "grupos": []
+      "antojos": [
+        "cafe"
+      ],
+      "grupos": [
+        {
+          "id": "espresso_doble",
+          "nombre": "Espresso doble",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "ed_unico",
+              "nombre": "Espresso doble",
+              "precio": 25
+            }
+          ]
+        },
+        {
+          "id": "macciato",
+          "nombre": "Macciato",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "mc_unico",
+              "nombre": "Macciato",
+              "precio": 30
+            }
+          ]
+        },
+        {
+          "id": "americano",
+          "nombre": "Americano",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "am_unico",
+              "nombre": "Americano",
+              "precio": 35
+            }
+          ]
+        },
+        {
+          "id": "flat_white",
+          "nombre": "Flat white",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "fw_unico",
+              "nombre": "Flat white",
+              "precio": 40
+            }
+          ]
+        },
+        {
+          "id": "latte",
+          "nombre": "Latte",
+          "descripcion": "Personalizable con Amaretto, Rompope, Cajeta, Caramelo o Avellana (+$10 chico / +$15 grande).",
+          "productos": [
+            {
+              "id": "la_m",
+              "nombre": "Mediano",
+              "precio": 40
+            },
+            {
+              "id": "la_gde",
+              "nombre": "Grande",
+              "precio": 45
+            }
+          ]
+        },
+        {
+          "id": "capuccino",
+          "nombre": "Capuccino",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "cp_m",
+              "nombre": "Mediano",
+              "precio": 40
+            },
+            {
+              "id": "cp_gde",
+              "nombre": "Grande",
+              "precio": 45
+            }
+          ]
+        },
+        {
+          "id": "capuccino_tradicional",
+          "nombre": "Capuccino tradicional (Latte Macciato)",
+          "descripcion": "Personalizable con Amaretto, Rompope, Cajeta, Caramelo o Avellana (+$10 chico / +$15 grande).",
+          "productos": [
+            {
+              "id": "ct_m",
+              "nombre": "Mediano",
+              "precio": 40
+            },
+            {
+              "id": "ct_gde",
+              "nombre": "Grande",
+              "precio": 45
+            }
+          ]
+        },
+        {
+          "id": "caramel_macciato",
+          "nombre": "Caramel Macciato",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "cm_m",
+              "nombre": "Mediano",
+              "precio": 45
+            },
+            {
+              "id": "cm_gde",
+              "nombre": "Grande",
+              "precio": 55
+            }
+          ]
+        },
+        {
+          "id": "mocka_caliente",
+          "nombre": "Mocka",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "mk_m",
+              "nombre": "Mediano",
+              "precio": 45
+            },
+            {
+              "id": "mk_gde",
+              "nombre": "Grande",
+              "precio": 55
+            }
+          ]
+        },
+        {
+          "id": "mocka_blanco",
+          "nombre": "Mocka Blanco",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "mb_m",
+              "nombre": "Mediano",
+              "precio": 50
+            },
+            {
+              "id": "mb_gde",
+              "nombre": "Grande",
+              "precio": 60
+            }
+          ]
+        },
+        {
+          "id": "dirty_chai_caliente",
+          "nombre": "Dirty Chai",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "dc_m",
+              "nombre": "Mediano",
+              "precio": 45
+            },
+            {
+              "id": "dc_gde",
+              "nombre": "Grande",
+              "precio": 55
+            }
+          ]
+        },
+        {
+          "id": "cafe_lechero",
+          "nombre": "Café lechero",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "cl_m",
+              "nombre": "Mediano",
+              "precio": 40
+            },
+            {
+              "id": "cl_gde",
+              "nombre": "Grande",
+              "precio": 45
+            }
+          ]
+        },
+        {
+          "id": "taro_latte_caliente",
+          "nombre": "Taro latte",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "tl_m",
+              "nombre": "Mediano",
+              "precio": 55
+            },
+            {
+              "id": "tl_gde",
+              "nombre": "Grande",
+              "precio": 65
+            }
+          ]
+        },
+        {
+          "id": "matcha_latte_caliente",
+          "nombre": "Matcha Latte",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "ml_m",
+              "nombre": "Mediano",
+              "precio": 40
+            },
+            {
+              "id": "ml_gde",
+              "nombre": "Grande",
+              "precio": 50
+            }
+          ]
+        },
+        {
+          "id": "chocolate_de_agua",
+          "nombre": "Chocolate de agua",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "cda_m",
+              "nombre": "Mediano",
+              "precio": 45
+            },
+            {
+              "id": "cda_gde",
+              "nombre": "Grande",
+              "precio": 55
+            }
+          ]
+        },
+        {
+          "id": "chocolate_de_leche",
+          "nombre": "Chocolate de leche",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "cdl_m",
+              "nombre": "Mediano",
+              "precio": 45
+            },
+            {
+              "id": "cdl_gde",
+              "nombre": "Grande",
+              "precio": 55
+            }
+          ]
+        },
+        {
+          "id": "infusiones_calientes",
+          "nombre": "Infusiones",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "inf_unico",
+              "nombre": "Infusiones",
+              "precio": 40
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "bebidas_frias",
@@ -183,46 +696,319 @@
       "descripcion": "Frappés y bebidas heladas con y sin café.",
       "icono": "glass-water",
       "antojos": [],
-      "grupos": []
-    },
-    {
-      "id": "postres",
-      "nombre": "Postres",
-      "descripcion": "Dulce para comenzar el día.",
-      "icono": "cake",
-      "antojos": ["dulce"],
-      "nota": "Agrega por $20 extras a tu pan francés o hot cakes: compota de frutos rojos, cajeta, chocolate o Nutella.",
       "grupos": [
         {
-          "id": "bowl_fruta",
-          "nombre": "Bowl de fruta",
+          "id": "mocka_frappe",
+          "nombre": "Mocka Frappé",
           "descripcion": "",
           "productos": [
-            { "id": "bf_unico", "nombre": "Bowl de fruta", "precio": 55, "antojos": ["ligero", "dulce"] }
+            {
+              "id": "mf_m",
+              "nombre": "Mediano",
+              "precio": 50
+            },
+            {
+              "id": "mf_gde",
+              "nombre": "Grande",
+              "precio": 70
+            }
           ]
         },
         {
-          "id": "hot_cake",
-          "nombre": "Hot cake natural",
+          "id": "capuccino_frappe",
+          "nombre": "Capuccino Frappé",
           "descripcion": "",
           "productos": [
-            { "id": "hc_unico", "nombre": "Hot cake natural", "precio": 55, "antojos": ["dulce"] }
+            {
+              "id": "cf_m",
+              "nombre": "Mediano",
+              "precio": 40
+            },
+            {
+              "id": "cf_gde",
+              "nombre": "Grande",
+              "precio": 60
+            }
           ]
         },
         {
-          "id": "pan_frances",
-          "nombre": "Pan francés clásico",
+          "id": "afogatto",
+          "nombre": "Afogatto",
           "descripcion": "",
           "productos": [
-            { "id": "pf_unico", "nombre": "Pan francés clásico", "precio": 70, "antojos": ["dulce"] }
+            {
+              "id": "af_unico",
+              "nombre": "Afogatto",
+              "precio": 50
+            }
           ]
         },
         {
-          "id": "pan_dulce",
-          "nombre": "Pan dulce",
+          "id": "carajillo",
+          "nombre": "Carajillo",
           "descripcion": "",
           "productos": [
-            { "id": "pd_unico", "nombre": "Pan dulce", "precio": 17, "antojos": ["dulce"] }
+            {
+              "id": "cj_unico",
+              "nombre": "Carajillo",
+              "precio": 95
+            }
+          ]
+        },
+        {
+          "id": "latte_taro_frio",
+          "nombre": "Latte Taro",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "ltf_m",
+              "nombre": "Mediano",
+              "precio": 65
+            },
+            {
+              "id": "ltf_gde",
+              "nombre": "Grande",
+              "precio": 75
+            }
+          ]
+        },
+        {
+          "id": "latte_matcha_frio",
+          "nombre": "Latte Matcha",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "lmf_m",
+              "nombre": "Mediano",
+              "precio": 65
+            },
+            {
+              "id": "lmf_gde",
+              "nombre": "Grande",
+              "precio": 75
+            }
+          ]
+        },
+        {
+          "id": "dirty_chai_frio",
+          "nombre": "Dirty Chai Frío",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "dcf_m",
+              "nombre": "Mediano",
+              "precio": 65
+            },
+            {
+              "id": "dcf_gde",
+              "nombre": "Grande",
+              "precio": 75
+            }
+          ]
+        },
+        {
+          "id": "malteada",
+          "nombre": "Malteada",
+          "descripcion": "Sabores disponibles: fresa, chocolate o vainilla.",
+          "productos": [
+            {
+              "id": "mt_unico",
+              "nombre": "Malteada",
+              "precio": 65
+            }
+          ]
+        },
+        {
+          "id": "sodas_italianas",
+          "nombre": "Sodas italianas",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "si_m",
+              "nombre": "Mediano",
+              "precio": 50
+            },
+            {
+              "id": "si_gde",
+              "nombre": "Grande",
+              "precio": 60
+            }
+          ]
+        },
+        {
+          "id": "infusiones_frias",
+          "nombre": "Infusiones frías",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "inff_unico",
+              "nombre": "Infusiones frías",
+              "precio": 40
+            }
+          ]
+        },
+        {
+          "id": "limonada",
+          "nombre": "Limonada",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "lim_m",
+              "nombre": "Mediano",
+              "precio": 40
+            },
+            {
+              "id": "lim_gde",
+              "nombre": "Grande",
+              "precio": 45
+            }
+          ]
+        },
+        {
+          "id": "naranjada",
+          "nombre": "Naranjada",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "nar_m",
+              "nombre": "Mediano",
+              "precio": 40
+            },
+            {
+              "id": "nar_gde",
+              "nombre": "Grande",
+              "precio": 45
+            }
+          ]
+        },
+        {
+          "id": "refresco_lata",
+          "nombre": "Refresco de lata",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "rl_unico",
+              "nombre": "Refresco de lata",
+              "precio": 30
+            }
+          ]
+        },
+        {
+          "id": "agua_mineral",
+          "nombre": "Agua Mineral",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "agm_unico",
+              "nombre": "Agua Mineral",
+              "precio": 25
+            }
+          ]
+        },
+        {
+          "id": "jarra_agua",
+          "nombre": "Jarra de agua",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "ja_unico",
+              "nombre": "Jarra de agua",
+              "precio": 65
+            }
+          ]
+        },
+        {
+          "id": "jarra_agua_mediana",
+          "nombre": "Jarra de agua mediana",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "jam_unico",
+              "nombre": "Jarra de agua mediana",
+              "precio": 50
+            }
+          ]
+        },
+        {
+          "id": "cerveza",
+          "nombre": "Cerveza",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "cv_unico",
+              "nombre": "Cerveza",
+              "precio": 35
+            }
+          ]
+        },
+        {
+          "id": "vaso_chelado",
+          "nombre": "Vaso Chelado",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "vc_unico",
+              "nombre": "Vaso Chelado",
+              "precio": 15
+            }
+          ]
+        },
+        {
+          "id": "vaso_michelado",
+          "nombre": "Vaso Michelado",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "vm_unico",
+              "nombre": "Vaso Michelado",
+              "precio": 15
+            }
+          ]
+        },
+        {
+          "id": "copa_vino",
+          "nombre": "Copa de vino",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "cop_unico",
+              "nombre": "Copa de vino",
+              "precio": 55
+            }
+          ]
+        },
+        {
+          "id": "clericot",
+          "nombre": "Clericot",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "clc_m",
+              "nombre": "Mediano",
+              "precio": 90
+            },
+            {
+              "id": "clc_gde",
+              "nombre": "Grande",
+              "precio": 160
+            }
+          ]
+        },
+        {
+          "id": "sangria",
+          "nombre": "Sangría",
+          "descripcion": "",
+          "productos": [
+            {
+              "id": "sg_m",
+              "nombre": "Mediano",
+              "precio": 90
+            },
+            {
+              "id": "sg_gde",
+              "nombre": "Grande",
+              "precio": 160
+            }
           ]
         }
       ]
